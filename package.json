@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode=production",
+    "lint": "standard",
+    "vercel-build": "npm run build",
     "development": "webpack server --mode=development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -25,6 +27,7 @@
     "@babel/preset-react": "^7.16.7",
     "babel-loader": "^8.2.3",
     "html-webpack-plugin": "^5.5.0",
+    "standard": "^16.0.4",
     "webpack": "^5.70.0",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.4"
@@ -32,5 +35,13 @@
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
+  },
+  "standard": {
+    "ignore": [
+      "/api/**"
+    ]
+  },
+  "eslintConfig": {
+    "extends": ["./node_modules/standard/eslintrc.json"]
   }
 }
