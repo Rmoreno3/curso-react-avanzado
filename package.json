@@ -7,7 +7,7 @@
     "build": "webpack --mode=production",
     "lint": "standard",
     "vercel-build": "npm run build",
-    "development": "webpack server --mode=development",
+    "development": "webpack server --mode=development --history-api-fallback",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -40,6 +40,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
+    "react-router-dom": "^6.2.2",
     "styled-components": "^5.3.3"
   },
   "standard": {

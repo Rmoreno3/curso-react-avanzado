@@ -1,7 +1,8 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   output: {
-    filename: 'ap.bundle.js'
+    filename: 'ap.bundle.js',
+    publicPath: '/'
   },
   mode: 'development',
   plugins: [

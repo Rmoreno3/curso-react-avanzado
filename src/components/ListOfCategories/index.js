@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Category } from '../Category/index'
 import { Loader } from '../Loader'
 import { List, Item } from './styles'
+// import { useParams } from 'react-router-dom'
 
 const useCategoriesData = () => {
   const [categories, setCategories] = useState([])
@@ -40,7 +41,7 @@ export const ListOfCategories = () => {
       {
         loading
           ? <Loader />
-          : categories.map(category => <Item key={category.id}><Category {...category} /></Item>)
+          : categories.map(category => <Item key={category.id}><Category {...category} path={`/pet/${category.id}`} /></Item>)
       }
     </List>
   )
